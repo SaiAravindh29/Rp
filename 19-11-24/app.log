@@ -1,0 +1,48 @@
+2024-11-21T10:06:20.734+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : Starting RpApplication using Java 21.0.3 with PID 14360 (C:\Sai_Aravindh\Project\19-11-24\target\classes started by sai.aravindh in C:\Sai_Aravindh\Project\19-11-24)
+2024-11-21T10:06:20.760+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : No active profile set, falling back to 1 default profile: "default"
+2024-11-21T10:06:20.899+05:30  INFO 14360 --- [Rp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-21T10:06:20.900+05:30  INFO 14360 --- [Rp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-21T10:06:22.594+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-11-21T10:06:22.618+05:30  INFO 14360 --- [Rp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-21T10:06:22.619+05:30  INFO 14360 --- [Rp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-21T10:06:22.899+05:30  INFO 14360 --- [Rp] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-21T10:06:22.908+05:30  INFO 14360 --- [Rp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-21T10:06:22.909+05:30  INFO 14360 --- [Rp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2007 ms
+2024-11-21T10:06:23.247+05:30 DEBUG 14360 --- [Rp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2024-11-21T10:06:23.326+05:30 DEBUG 14360 --- [Rp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-21T10:06:23.364+05:30 DEBUG 14360 --- [Rp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-21T10:06:23.424+05:30 DEBUG 14360 --- [Rp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-21T10:06:23.587+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-21T10:06:23.668+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-11-21T10:06:23.685+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : Started RpApplication in 4.215 seconds (process running for 6.646)
+2024-11-21T10:06:44.062+05:30  INFO 14360 --- [Rp] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-21T10:06:44.063+05:30  INFO 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-21T10:06:44.063+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-21T10:06:44.063+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-21T10:06:44.063+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-21T10:06:44.064+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@71190477
+2024-11-21T10:06:44.065+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@73c87f87
+2024-11-21T10:06:44.065+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-21T10:06:44.065+05:30  INFO 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-11-21T10:06:44.083+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/Rp/auth/showContact", parameters={}
+2024-11-21T10:06:44.102+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.Rp.Controller.HomeController#getContact()
+2024-11-21T10:06:44.779+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-11-21T10:06:44.782+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.Rp.entity.ContactUs@4f5414b7, com.Rp.entity.ContactUs@5130d4dd, com.Rp.entity.ContactUs@11150b2 (truncated)...]
+2024-11-21T10:06:44.853+05:30 DEBUG 14360 --- [Rp] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-21T10:11:50.510+05:30  INFO 14360 --- [Rp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-21T10:11:50.618+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : Starting RpApplication using Java 21.0.3 with PID 14360 (C:\Sai_Aravindh\Project\19-11-24\target\classes started by sai.aravindh in C:\Sai_Aravindh\Project\19-11-24)
+2024-11-21T10:11:50.619+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : No active profile set, falling back to 1 default profile: "default"
+2024-11-21T10:11:50.897+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-11-21T10:11:50.900+05:30  INFO 14360 --- [Rp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-21T10:11:50.901+05:30  INFO 14360 --- [Rp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-21T10:11:50.974+05:30  INFO 14360 --- [Rp] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-21T10:11:50.975+05:30  INFO 14360 --- [Rp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-21T10:11:50.975+05:30  INFO 14360 --- [Rp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2024-11-21T10:11:51.053+05:30 DEBUG 14360 --- [Rp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2024-11-21T10:11:51.081+05:30 DEBUG 14360 --- [Rp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-21T10:11:51.087+05:30 DEBUG 14360 --- [Rp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-21T10:11:51.091+05:30 DEBUG 14360 --- [Rp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-21T10:11:51.114+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-21T10:11:51.144+05:30  INFO 14360 --- [Rp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-11-21T10:11:51.148+05:30  INFO 14360 --- [Rp] [restartedMain] com.Rp.RpApplication                     : Started RpApplication in 0.567 seconds (process running for 334.113)
+2024-11-21T10:11:51.150+05:30  INFO 14360 --- [Rp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

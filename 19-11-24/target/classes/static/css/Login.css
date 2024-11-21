@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* General reset and margin adjustments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up a smooth background color and center the content */
+body {
+    background-color: #f4f7fc; /* Light background for a soft, clean look */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Center the login form */
+.login-container {
+    background-color: #fff; /* White background for the form */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form header */
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    margin-right: 2%;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* Focus effect on input fields */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007BFF; /* Blue border when focused */
+    outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submit button */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue when hovering */
+}
+
+/* Responsive design: Adjust form width on smaller screens */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1rem;
+    }
+}
