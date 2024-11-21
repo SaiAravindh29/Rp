@@ -1,0 +1,94 @@
+<div class="container-fluid position-relative p-0">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="#" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="home" class="nav-item nav-link">Home</a>
+                <a href="about" class="nav-item nav-link">About</a>
+                <a class="nav-item nav-link" routerLink="/service" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Services</a>
+                <a href="menu" class="nav-item nav-link">Menu</a>
+                <!-- <a href="booking" class="nav-item nav-link">Pages</a> -->
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle nav-item nav-link" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-warning" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="booking">Bookings</a></li>
+                        <li><a class="dropdown-item" href="teams">Our Teams</a></li>
+                        <li><a class="dropdown-item" href="review">Reviews</a></li>
+                    </ul>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- <a href="login" class="btn btn-warning fw-medium py-2 px-4">Login</a> -->
+        </div>
+    </nav>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 " style="margin-top: 15%;">
+                <div class="text-center wow fadeInup">
+                    <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                        Our Services
+                    </h5>
+                    <h1 class="mb-5">Exquisite Dining Anytime</h1>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInup" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-warning mb-4"></i>
+                            <h5>Master Chefs</h5>
+                            <p>Our team of Master Chefs brings years of expertise to every dish, ensuring top-notch
+                                quality and flavor in every bite. Whether it’s a delicate dessert or a hearty main
+                                course, we serve nothing less than perfection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInup">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-utensils text-warning mb-4"></i>
+                            <h5>Quality Food</h5>
+                            <p>At The Foodie Friends, we believe that great food starts with the best ingredients. Our
+                                commitment to quality means you’ll always
+                                enjoy meals that are not only delicious but nourishing, prepared with love and attention
+                                to detail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInup">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fas fa-3x fa-smile text-warning mb-4"></i>
+                            <h5>Family-Friendly Atmosphere</h5>
+                            <p>We create a welcoming environment for guests of all ages. From our kid-friendly menu to
+                                spacious seating, we ensure that your whole family enjoys a great meal together.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInup">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-warning mb-4"></i>
+                            <h5>24/7 Service</h5>
+                            <p>we understand that cravings don’t have a clock. That’s why we’re
+                                proud to offer 24/7 service, Our team is dedicated to ensuring you get the same
+                                high-quality food and exceptional service, no matter the time of day or night. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

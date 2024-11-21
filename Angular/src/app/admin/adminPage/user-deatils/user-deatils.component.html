@@ -1,0 +1,53 @@
+<div class="container-fluid position-relative p-0">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="admin" class="nav-item nav-link">Home</a>
+                <a class="nav-item nav-link" routerLink="/userDetails" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">User Details</a>
+                <a href="bookingDetails" class="nav-item nav-link">Booking Details</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Table Starts -->
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="dataTable" style="margin-top: 10rem;">
+                <thead>
+                    <tr class="text-center">
+                        <th class="col">UserId</th>
+                        <th class="col">User Name</th>
+                        <th class="col">Email</th>
+                        <th class="col">Group ID</th>
+                        <th class="col">Status</th>
+                        <th class="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of getUser">
+                        <td class="text-center">{{item.userid}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.email}}</td>
+                        <td class="text-center">{{item.groupid}}</td>
+                        <td class="text-center align-item-center fw-bold" [ngClass]="{'active-status': item.groupid === 1, 'inactive-status': item.groupid === 2}">
+                            {{ item.groupid === 1 ? 'Active' : 'Inactive' }}
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-danger m-2 fw-bold"
+                                [ngClass]="{'block-status': item.groupid === 1, 'blocked-status': item.groupid === 2}"><i class="fa fa-ban"></i>
+                                {{ item.groupid === 1 ? 'Block' : 'Blocked' }}</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

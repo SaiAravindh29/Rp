@@ -1,0 +1,674 @@
+<!-- <div class="container-xxl position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i> The Foodie Friends</h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="home" class="nav-item nav-link active">Home</a>
+                <a href="about" class="nav-item nav-link ">About</a>
+                <a href="service" class="nav-item nav-link ">Services</a>
+                <a href="menu" class="nav-item nav-link ">Menu</a>
+                <a href="booking" class="nav-item nav-link ">Pages</a>
+                <a href="contact" class="nav-item nav-link ">Contact</a>
+            </div>
+            <a href="login" class="btn btn-warning py-2 px-4">Login</a>
+        </div>
+    </nav>
+
+    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <div class="container my-5 py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-3 text-white animated sliderInLeft">Welcome To <br>The Foodie Friends</h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">
+                        Multi-Cuisine Family Friendly Restaurant. Sharing Flavors, Creating Memories. Where
+                        every bite is a New Adventure. Bringing people Together, Taste, Repeat. Explore the world,
+                        "A Journey of Taste and Friendship."
+                    </p>
+                    <a href="" class="btn btn-warning py--sm-3 px-sm-5 slideInLeft">Book A Tables</a>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/036/512/678/small_2x/ai-generated-top-view-of-a-black-plate-with-indian-food-isolated-on-a-transparent-background-png.png"
+                        width="450px" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                <a href="about" class="nav-item nav-link">About</a>
+                <a href="service" class="nav-item nav-link">Services</a>
+                <a href="menu" class="nav-item nav-link">Menu</a>
+                <!-- <a href="booking" class="nav-item nav-link">Pages</a> -->
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle nav-item nav-link" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-warning" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="booking">Bookings</a></li>
+                        <li><a class="dropdown-item" href="teams">Our Teams</a></li>
+                        <li><a class="dropdown-item" href="review">Reviews</a></li>
+                    </ul>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- Profile Dropdown (This section will only show when logged in) -->
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://www.pngarts.com/files/5/Cartoon-Avatar-PNG-Image-Transparent.png" class="rounded-circle" width="80" height="50" />Welcome Back!
+                    <h6 class="">{{user}}</h6>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                    <li><a class="dropdown-item" routerLink="/profile">View Profile</a></li>
+                    <li><a class="dropdown-item" routerLink="/bookings">Your Bookings</a></li>
+                    <li><a class="dropdown-item" routerLink="/login">Log out</a></li>
+                    <!-- Add more items if necessary -->
+                </ul>
+            </div>
+            <!-- <a *ngIf="!isLoggedIn" href="login" class="btn btn-warning fw-medium py-2 px-4 button">Login</a> -->
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5 bg-dark hero-header">
+        <div class="container my-5 py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-3 text-white animated sliderInLeft" style="font-family: 'Pacifico';">Welcome To
+                        <br>The Foodie Friends
+                    </h1>
+                    <p class="text-white animated slideInLeft mb-4 pb-2">
+                        Multi-Cuisine Family Friendly Restaurant. Sharing Flavors, Creating Memories. Where
+                        every bite is a New Adventure. Bringing people Together, Taste, Repeat. Explore the world,
+                        "A Journey of Taste and Friendship."
+                    </p>
+                    <a href="booking" class="btn btn-warning py--sm-3 px-sm-2 slideInLeft">Book A Table</a>
+                    <a href="menu" class="btn btn-success py--sm-3 px-sm-2 slideInLeft"
+                        style="margin-left: 15px;">Explore Now</a>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/036/512/678/small_2x/ai-generated-top-view-of-a-black-plate-with-indian-food-isolated-on-a-transparent-background-png.png"
+                        width="450px" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- navbar & home page end -->
+
+<!-- service page start -->
+
+
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="text-center wow fadeInup">
+                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                    Our Services
+                </h5>
+                <h1 class="mb-5">Exquisite Dining Anytime</h1>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInup" data-wow-delay="0.1s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-user-tie text-warning mb-4"></i>
+                        <h5>Master Chefs</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInup">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-utensils text-warning mb-4"></i>
+                        <h5>Quality Food</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInup">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-cart-plus text-warning mb-4"></i>
+                        <h5>Online Order</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInup">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-headset text-warning mb-4"></i>
+                        <h5>24/7 Service</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- service page section end -->
+
+<!-- About Page section Start -->
+
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6 text-start">
+                        <img class="img-gluid rounded w-100 wow zoomIn"
+                            src="https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8fDA%3D"
+                            alt="">
+                    </div>
+                    <div class="col-6 text-start">
+                        <img class="img-gluid rounded w-75 wow zoomIn"
+                            src="https://t3.ftcdn.net/jpg/09/86/11/72/240_F_986117284_0V1nghrJlft8eLyyPSPP4ZBCQQowiuJD.jpg"
+                            style="margin-top: 15%;" alt="">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-gluid rounded w-75 wow zoomIn"
+                            src="https://t3.ftcdn.net/jpg/08/57/37/00/240_F_857370061_KRKJfiUbS99GPAJmtSQIBPc15QzY4rYu.jpg"
+                            alt="">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-gluid rounded w-100 wow zoomIn"
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/46/00/8c/chukander-ki-tikki-beatroot.jpg?w=600&h=-1&s=1"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="section-title ff-secondary text-start text-warning fw-normal">
+                    About Us
+                </h5>
+                <h1 class="mb-4">Welcome To <i class="fa fa-utensils text-warning me-2"></i>The Foodie Friends</h1>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                            <h1 class="flex-shrink-0 display-5 text-warning mb-0 fw-bold">15</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Years of</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Experience</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                            <h1 class="flex-shrink-0 display-5 text-warning mb-0 fw-bold">50</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Popular</p>
+                                <h6 class="text-uppercase mb-0 fw-bold">Master Chefs</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn btn-warning py-3 px-5 mt-2">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- About Page section end -->
+
+<!-- Menu Page section Start -->
+
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInup">
+            <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                Food Menu
+            </h5>
+            <h1 class="mb-5">Most Popular Items</h1>
+        </div>
+        <div class="tab-class text-center wow fadeInup" data-wow-delay="0.1s">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                <li class="nav-item">
+                    <div class="d-flex align-items-center text-start mx-3 pb-3">
+                        <i class="fa fa-hamburger fa-2x text-warning"></i>
+                        <div class="ps-3">
+                            <small class="text-body">Special</small>
+                            <h6 class="mt-n1 mb-0">Launch</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="d-flex align-items-center text-start mx-3 pb-3">
+                        <i class="fa fa-utensils fa-2x text-warning"></i>
+                        <div class="ps-3">
+                            <small class="text-body">Lovely</small>
+                            <h6 class="mt-n1 mb-0">Dinner</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="d-flex align-items-center text-start mx-3 pb-3">
+                        <i class="fa fa-coffee fa-2x text-warning"></i>
+                        <div class="ps-3">
+                            <small class="text-body">Popular</small>
+                            <h6 class="mt-n1 mb-0">Breakfast</h6>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Chicken Burger Combo</span>
+                                        <span class="text-warning fw-bold">$250</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Crispy Fried Chicken</span>
+                                        <span class="text-warning fw-bold">$200</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://img.freepik.com/free-photo/sliced-chicken-pizza-served-with-sauce_140725-7056.jpg"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Tandoori Chicken Pizza</span>
+                                        <span class="text-warning fw-bold">$180</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://img.freepik.com/free-photo/vegetables-salad-table_23-2148515515.jpg"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Vegetable Salad</span>
+                                        <span class="text-warning fw-bold">$120</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_2d2SAox1mZQc8Yy_ebMdCPFwXmsJCnU7Haq4Cd7RWG0_3jfJj_58ECnEUx7XEYdGJg&usqp=CAU"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Indian Big Thali</span>
+                                        <span class="text-warning fw-bold">$300</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://img.freepik.com/premium-photo/photo-indian-gavkari-chicken-thali-food-platter-consists-variety-veggieschicken-meat_1138631-6670.jpg"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Non-Veg Chicken Thali</span>
+                                        <span class="text-warning fw-bold">$350</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNMV5pzy_6DqH7kN1lv3NluSFNsYUw1lkk0O-fRZQRcnX67t8YkDa0AfwcGZfGRf0U9TY&usqp=CAU"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Banana & Caramel Icecream</span>
+                                        <span class="text-warning fw-bold">$155</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTtCj_-DIte6GeNNW9aJwjHkl6HKrIkHgPV372cm96VEUmGN1mJiK5zY2qfeCsABxwWb4&usqp=CAU"
+                                    class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>Mexican A Tray of Dessert</span>
+                                        <span class="text-warning fw-bold">$220</span>
+                                    </h5>
+                                    <small class="fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Menu Page section end -->
+
+<!-- Reservation Section Start -->
+
+<!-- <div class="container-xxl py-5 px-0 wow fadeInup">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <div class="video">
+                <button type="button" class="btn-play" data-bs-toggle="model"
+                    data-src="https://www.youtube.com/watch?v=kRCH8kD1GD0" data-bs-target="#videomoal">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 bg-dark align-items-center">
+            <div class="p-5">
+                <h5 class="section-title ff-secondary text-start text-warning fw-normal">
+                    Reservation
+                </h5>
+                <h1 class="text-white mb-4">
+                    Book A Table Online
+                </h1>
+                <form action="">
+                    <div class="row g-3">
+                        <div class="col-mb-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="">
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-mb-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="email" placeholder="">
+                                <label for="name">Your Email</label>
+                            </div>
+                        </div>
+
+                        <div class="col-mb-6">
+                            <div class="form-floating date" id="date3">
+                                <input type="text" class="form-control" id="name" placeholder="Date & Time"
+                                    data-target="#date3" data-toggle="datetimepicker" itemid="datetime">
+                                <label for="name">Date & Time</label>
+                            </div>
+                        </div>
+
+                        <div class="col-mb-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="select1">
+                                    <option value="1">People 1</option>
+                                    <option value="2">People 2</option>
+                                    <option value="3">People 3</option>
+                                </select>
+                                <label for="select1">No Of People</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="Special Request"
+                                    style="height: 100px;">
+
+                                </textarea>
+                                <label for="message">Special Request</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-warning w-100 py-3" type="submit">Book Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="" class="embed-responsive-item" id="video" allowfullscreen="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Reservation Section End -->
+
+<!-- Team Section Start -->
+
+<!-- <div class="container-xxl pt-5 pb-2">
+    <div class="container">
+        <div class="text-center wow fadeInup">
+            <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                Team Members
+            </h5>
+            <h1 class="mb-5">Our Master Chefs</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInup">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="rounded-circle overflow-hidden m-4">
+                        <img class="img-fluid"
+                            src="https://t4.ftcdn.net/jpg/08/11/10/01/240_F_811100127_NvUsCkj05vWRBYDJeh42d5GEEvsBk8US.jpg"
+                            alt="">
+                    </div>
+                    <h5 class="mb-0">Full Name</h5>
+                    <small>Designation</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInup">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="rounded-circle overflow-hidden m-4">
+                        <img class="img-fluid"
+                            src="https://t4.ftcdn.net/jpg/10/29/02/19/240_F_1029021963_i2VFM8kZX06YBuzVSInxuZ5OuihOt0CT.jpg"
+                            alt="">
+                    </div>
+                    <h5 class="mb-0">Full Name</h5>
+                    <small>Designation</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInup">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="rounded-circle overflow-hidden m-4">
+                        <img class="img-fluid"
+                            src="https://t3.ftcdn.net/jpg/06/76/94/02/240_F_676940252_RJPfC2KUobBLl9Hu7OQXbvAvvUn2sIu0.jpg"
+                            alt="">
+                    </div>
+                    <h5 class="mb-0">Full Name</h5>
+                    <small>Designation</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInup">
+                <div class="team-item text-center rounded overflow-hidden">
+                    <div class="rounded-circle overflow-hidden m-4">
+                        <img class="img-fluid"
+                            src="https://t4.ftcdn.net/jpg/06/96/83/83/240_F_696838325_exIL3kCRkpf2QbMcvgq7M2Xjb0lksMhJ.jpg"
+                            alt="">
+                    </div>
+                    <h5 class="mb-0">Full Name</h5>
+                    <small>Designation</small>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Team Section End -->
+
+<!-- Footer Section Start -->
+
+<!-- <div class="container-xxl bg-dark text-light footer pt-5 mt-5 wow fadeInup">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal">Company</h4>
+                <a href="about" class="btn btn-link text-warning">About</a>
+                <a href="contact" class="btn btn-link text-warning">Contact Us</a>
+                <a href="booking" class="btn btn-link text-warning">Reservation</a>
+                <a href="" class="btn btn-link text-warning">Privacy Policy</a>
+                <a href="" class="btn btn-link text-warning">Terms & Conditions</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal">Contact</h4>
+
+                <p class="mb-2"><i class="fa fa-map-marker-alt"></i> 123 street, Chennai, India</p>
+                <p class="mb-2"><i class="fa fa-phone-alt"></i> +91 674 532 9910</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i> info-at-thefoodiefriends.com</p>
+                <div class="d-flex pt-2">
+                    <a href="" class="btn btn-outline-light btn-social"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="btn btn-outline-light btn-social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="btn btn-outline-light btn-social"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="btn btn-outline-light btn-social"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal mb-4">Opening</h4>
+                <h5 class="text-light fw-bold">Monday - Saturday</h5>
+                <p>10AM - 10PM</p>
+                <h5 class="text-light fw-bold">Sunday</h5>
+                <p>09AM - 09PM</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal">NewsLetter</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="position-relative mx-auto">
+                    <input type="text" class="form-control border-warning w-100 py-3 ps-4 pe-5">
+                    <button class="btn btn-warning py-2 position-absolute top-0 end-0 me-2">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center mb-3 mb-md-0 col-lg-12">
+                    &copy; <a class="border-bottom text-warning" href="">The Foodie Friends, All right Reserved</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Footer Section End -->

@@ -1,0 +1,548 @@
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="home" class="nav-item nav-link">Home</a>
+                <a href="about" class="nav-item nav-link">About</a>
+                <a href="service" class="nav-item nav-link">Services</a>
+                <a class="nav-item nav-link" routerLink="/menu" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Menu</a>
+                <!-- <a href="booking" class="nav-item nav-link">Pages</a> -->
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle nav-item nav-link" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-warning" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="booking">Bookings</a></li>
+                        <li><a class="dropdown-item" href="teams">Our Teams</a></li>
+                        <li><a class="dropdown-item" href="review">Reviews</a></li>
+                    </ul>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- <a href="login" class="btn btn-warning py-2 px-4">Login</a> -->
+        </div>
+    </nav>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInup" style="margin-top: 10%;">
+                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                    Food Menu
+                </h5>
+                <h3 class="mb-5">Crafted with Love, Served with Flavor</h3>
+            </div>
+            <div class="tab-class text-center wow fadeInup" data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center text-start mx-3 pb-3 text-lg-start" (click)="onItemClick('starters')">
+                            <i class="fa fa-martini-glass fa-2x text-warning"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Starters</small>
+                                <h6 class="mt-n1 mb-0">Appetizers</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center text-start mx-3 pb-3 text-lg-start" (click)="onItemClick('indian')">
+                            <i class="fa fa-bowl-rice fa-2x text-warning"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Indian Cuisines</small>
+                                <h6 class="mt-n1 mb-0">Veg & Non-Veg Delights</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center text-start mx-3 pb-3" (click)="onItemClick('continental')">
+                            <i class="fa fa-pizza-slice fa-2x text-warning"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Continental</small>
+                                <h6 class="mt-n1 mb-0">Classic & Modern Dishes</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center text-start mx-3 pb-3" (click)="onItemClick('mexican')">
+                            <i class="fa fa-pepper-hot fa-2x text-warning"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Mexican</small>
+                                <h6 class="mt-n1 mb-0">Tacos & Burritos</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center text-start mx-3 pb-3" (click)="onItemClick('desserts')">
+                            <i class="fa fa-ice-cream fa-2x text-warning"></i>
+                            <div class="ps-3">
+                                <small class="text-body">Desserts</small>
+                                <h6 class="mt-n1 mb-0">Sweet Endings</h6>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Most Popular Items -->
+                <div class="tab-content" *ngIf="Popular">
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                    Most Popular Items
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Chicken Burger Combo</span>
+                                            <span class="text-warning fw-bold">₹250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Juicy grilled chicken, fresh veggies, and a side of crispy fries – the perfect protein-packed combo!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Crispy Fried Chicken</span>
+                                            <span class="text-warning fw-bold">₹200</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Tender on the inside, crispy on the outside – the ultimate fried chicken 
+                                            experience perfectly seasoned crunch in every bite!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/free-photo/sliced-chicken-pizza-served-with-sauce_140725-7056.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Tandoori Chicken Pizza</span>
+                                            <span class="text-warning fw-bold">₹180</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            A flavorful fusion of spicy tandoori chicken and melty cheese on a crispy pizza crust!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/free-photo/vegetables-salad-table_23-2148515515.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Vegetable Salad</span>
+                                            <span class="text-warning fw-bold">₹120</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            A fresh, crisp mix of seasonal veggies for a light and healthy bite!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_2d2SAox1mZQc8Yy_ebMdCPFwXmsJCnU7Haq4Cd7RWG0_3jfJj_58ECnEUx7XEYdGJg&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Indian Big Thali</span>
+                                            <span class="text-warning fw-bold">₹300</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Experience the rich taste of India with a full platter of curries, 
+                                            dal, roti, rice, and more! – all in one hearty thali
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-indian-gavkari-chicken-thali-food-platter-consists-variety-veggieschicken-meat_1138631-6670.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Non-Veg Chicken Thali</span>
+                                            <span class="text-warning fw-bold">₹350</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Savor the bold flavors of succulent chicken, paired with rice, roti, dal, and a variety 
+                                            of delicious sides! – the ultimate non-veg thali experience!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNMV5pzy_6DqH7kN1lv3NluSFNsYUw1lkk0O-fRZQRcnX67t8YkDa0AfwcGZfGRf0U9TY&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Banana & Caramel Icecream</span>
+                                            <span class="text-warning fw-bold">₹155</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Creamy banana ice cream swirled with rich caramel – a sweet and indulgent treat!.
+                                            A luscious blend of ripe bananas and smooth caramel, frozen to perfection for a delightful dessert!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTtCj_-DIte6GeNNW9aJwjHkl6HKrIkHgPV372cm96VEUmGN1mJiK5zY2qfeCsABxwWb4&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Mexican A Tray of Dessert</span>
+                                            <span class="text-warning fw-bold">₹220</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Experience the flavors of Mexico with an irresistible assortment of desserts, from rich tres leches to cinnamon churros!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters & Bevergers -->
+                <div class="tab-content" *ngIf="starters" >
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                    Starters & Beverages
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t4.ftcdn.net/jpg/10/52/92/37/240_F_1052923787_nlivzrtoTn8bI84qIiMBGRCftQaZCpiP.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Vegetarian Samosas</span>
+                                            <span class="text-warning fw-bold">₹100</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Vegetarian samosas are a popular snack in India and are generally affordable. A plate of 2-4 samosas is common.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t3.ftcdn.net/jpg/10/39/43/18/240_F_1039431861_lDtARKKo9ywsNKzgy0bWU7qsW0kkzSIv.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Stuffed Mushrooms</span>
+                                            <span class="text-warning fw-bold">₹250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Typically, stuffed mushrooms are served as a starter and might be priced based on the stuffing (cheese, herbs, vegetables, or meat).
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t4.ftcdn.net/jpg/10/76/65/65/240_F_1076656541_HNMkXxgSZmFEfvb1voPE9KJ7vrie44at.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Shrimp Cocktail</span>
+                                            <span class="text-warning fw-bold">₹350</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            As a seafood dish, shrimp cocktail can be on the pricier side, especially in coastal cities or high-end restaurants.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t4.ftcdn.net/jpg/08/44/03/27/240_F_844032744_kCdpO1dL510vOWwUzrHShpap3RT8xj27.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Crispy Chickpeas</span>
+                                            <span class="text-warning fw-bold">₹150</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            These are usually served as a light snack or appetizer. Pricing will vary depending on portion size and seasonings.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t3.ftcdn.net/jpg/09/65/10/60/240_F_965106047_bUNPR2e4c1NrS9Ij7De0vGaYxRqAFU4q.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Avocado Spring Rolls</span>
+                                            <span class="text-warning fw-bold">₹300</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Fresh spring rolls filled with avocado, shrimp, and crisp vegetables.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://t4.ftcdn.net/jpg/09/29/21/19/240_F_929211987_tAISwdVhgipUzmgJl3j7RRXcYBZj9zYI.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span>Calamari</span>
+                                            <span class="text-warning fw-bold">₹400</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            As a seafood dish, calamari (fried or grilled) can vary widely in price, especially if it’s served with dips or sauces.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indian Cuisines -->
+                <div class="tab-content" *ngIf="indian" >
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                    Indian Cuisines
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">₹250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">₹200</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continental Cuisines -->
+                <div class="tab-content" *ngIf="continental" >
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                    Continental Cuisines
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">₹250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">Rs.200</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mexican Cuisines -->
+                <div class="tab-content" *ngIf="mexican" >
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                    Mexican Cuisines
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">Rs.250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">Rs.200</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts Items -->
+                <div class="tab-content" *ngIf="desserts" >
+                    <div class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="text-center wow fadeInup" >
+                                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                                   Desserts
+                                </h5>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://img.freepik.com/premium-photo/photo-delicious-fried-chicken_929907-181.jpg"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">Rs.250</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVOrfCdt4auf4ADtTWle8ra644pkrO4q3TRenhDXq7RGRI3pb3j-yUjpdZXObpQBkuOAU&usqp=CAU"
+                                        class="flex-shrink-0 img-fluid rounded" style="width: 130px; height: 130px;"
+                                        alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                            <span></span>
+                                            <span class="text-warning fw-bold">Rs.200</span>
+                                        </h5>
+                                        <small class="fst-italic">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container-fluid position-relative p-0">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="admin" class="nav-item nav-link">Home</a>
+                <a href="userDetails" class="nav-item nav-link" >User Details</a>
+                <a  class="nav-item nav-link" routerLink="/bookingDetails" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Booking Details</a>
+            </div>
+        </div>
+    </nav>
+
+      <!-- Table Starts -->
+      <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" style="margin-top: 10rem;">
+                <thead>
+                    <tr class="text-center">
+                        <th class="col">Booking ID</th>
+                        <th class="col">User Name</th>
+                        <th class="col">Email</th>
+                        <th class="col">Phone Number</th>
+                        <th class="col">Date of Booking</th>
+                        <th class="col">Booking Time</th>
+                        <th class="col">Number of Guests</th>
+                        <th class="col">Cuisine Type</th>
+                        <th class="col">Meal Timing</th>
+                        <th class="col">Table Type</th>
+                        <th class="col">Indoor</th>
+                        <th class="col">Events</th>
+                        <th class="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of getBooking">
+                        <td>{{item.bookingId}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.phone_number}}</td>
+                        <td>{{item.bookingDate}}</td>
+                        <td>{{item.bookingTime}}</td>
+                        <td>{{item.NumberofGuest}}</td>
+                        <td>{{item.cuisine_type}}</td>
+                        <td>{{item.foodTiming}}</td>
+                        <td>{{item.tableType}}</td>
+                        <td>{{item.indoor}}</td>
+                        <td>{{item.event}}</td>
+                        <td class="text-center">
+                            <button class="btn btn-primary m-2 fw-bold"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-danger m-2 fw-bold"><i class="fas fa-trash"></i> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

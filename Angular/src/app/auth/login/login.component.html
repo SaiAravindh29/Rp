@@ -1,0 +1,75 @@
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="https://plus.unsplash.com/premium_photo-1670740967011-86730910a2e5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D" alt="">
+            <div class="text">
+                <span class="text-1">Hungry for a New Experience?</span>
+                <span class="text-2">Log in to unlock your personalized dining <br>
+                    journey at "The Foodie Friends". </span>
+            </div>
+        </div>
+        <div class="back">
+            <img class="backImg" src="https://media.istockphoto.com/id/1081422898/photo/pan-fried-duck.jpg?s=612x612&w=0&k=20&c=kzlrX7KJivvufQx9mLd-gMiMHR6lC2cgX009k9XO6VA=" alt="">
+            <div class="text">
+                <span class="text-1">Start Your Culinary Adventure</span>
+                <span class="text-2">Join us today and be the first to explore our special menus, seasonal dishes,
+                     and easy reservations. Let’s make your next meal unforgettable.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="login-form">
+                <div class="title">Login</div>
+                <form [formGroup]="loginForm">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-envelope"></i> -->
+                            <input type="text" placeholder="Enter your username / email" formControlName="userInput" required>
+                        </div>
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-lock"></i> -->
+                            <input type="password" placeholder="Enter your password" formControlName="password" required>
+                        </div>
+                        <div class="text"><a href="#">Forgot password?</a></div>
+                        <div class="button input-box">
+                            <a href="home"></a><input type="submit" value="Sumbit" (click)=loginSubmit()>
+                        </div>
+                        <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-form">
+                <div class="title" >Signup</div>
+                <!-- <small style="font-size: 15px;">Create your account to begin your personalized dining experience at "The Foodie Friends"</small> -->
+                <form [formGroup]="signupForm">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-user"></i> -->
+                            <input type="text" placeholder="Enter your username" formControlName="userName" required>
+                        </div>
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-envelope"></i> -->
+                            <input type="email" placeholder="Enter your email" formControlName="email" required>
+                        </div>
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-lock"></i> -->
+                            <input type="password" placeholder="Enter your password" formControlName="password" required>
+                        </div>
+                        <div class="input-box">
+                            <!-- <i class="fa-solid fa-lock"></i> -->
+                            <input type="password" placeholder="Enter your Confirm password" formControlName="confirmPassword" required>
+                        </div>
+                        <div class="button input-box">
+                            <a href="login"></a><input type="submit" value="Sumbit" (click)=signupSubmit()>
+                        </div>
+                        <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

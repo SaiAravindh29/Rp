@@ -1,0 +1,123 @@
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a href="" class="navbar-brand p-0">
+            <h1 class="m-0"><i class="fa fa-utensils text-warning"></i></h1>
+        </a>
+        <button class="navbar-toggler" type="submit">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
+                <a href="home" class="nav-item nav-link">Home</a>
+                <a href="about" class="nav-item nav-link">About</a>
+                <a href="service" class="nav-item nav-link">Services</a>
+                <a href="menu" class="nav-item nav-link">Menu</a>
+                <!-- <a href="booking" class="nav-item nav-link">Pages</a> -->
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle nav-item nav-link" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-warning" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="booking">Bookings</a></li>
+                        <li><a class="dropdown-item" routerLink="/teams" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }">Our Teams</a></li>
+                        <li><a class="dropdown-item" href="review">Reviews</a></li>
+                    </ul>
+                </div>
+                <a href="contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-xxl pt-5 pb-2">
+        <div class="container" style="margin-top: 10%;">
+            <div class="text-center wow fadeInup">
+                <h5 class="section-title ff-secondary text-center text-warning fw-normal">
+                    Team Members
+                </h5>
+                <h1 class="mb-5">Our Master Chefs</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeInup">
+                    <div class="team-item text-center rounded overflow-hidden">
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                src="https://t4.ftcdn.net/jpg/08/11/10/01/240_F_811100127_NvUsCkj05vWRBYDJeh42d5GEEvsBk8US.jpg"
+                                alt="">
+                        </div>
+                        <h5 class="mb-0">Chef James Anderson</h5>
+                        <small class="text-warning"><b>Pastry Chef</b></small> <br>
+                        <small><b>Title:</b> Flavors Specialist</small><br>
+                        <small><b>Specialty:</b> Desserts & Pastries</small> 
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInup">
+                    <div class="team-item text-center rounded overflow-hidden">
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                src="https://t4.ftcdn.net/jpg/10/29/02/19/240_F_1029021963_i2VFM8kZX06YBuzVSInxuZ5OuihOt0CT.jpg"
+                                alt="">
+                        </div>
+                        <h5 class="mb-0">Chef Priya Reddy</h5>
+                        <small class="text-warning"><b>Head Chef</b></small> <br>
+                        <small><b>Title:</b> Taste Innovator</small><br>
+                        <small><b>Specialty:</b> South Indian Recipes</small> 
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInup">
+                    <div class="team-item text-center rounded overflow-hidden">
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                src="https://t3.ftcdn.net/jpg/06/76/94/02/240_F_676940252_RJPfC2KUobBLl9Hu7OQXbvAvvUn2sIu0.jpg"
+                                alt="">
+                        </div>
+                        <h5 class="mb-0">Chef Samuel Bennett</h5>
+                        <small class="text-warning"><b>Executive Chef</b></small> <br>
+                        <small><b>Title:</b> Master of the Flame</small><br>
+                        <small><b>Specialty:</b> Mexican Tacos & More</small> 
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInup">
+                    <div class="team-item text-center rounded overflow-hidden">
+                        <div class="rounded-circle overflow-hidden m-4">
+                            <img class="img-fluid"
+                                src="https://t4.ftcdn.net/jpg/06/96/83/83/240_F_696838325_exIL3kCRkpf2QbMcvgq7M2Xjb0lksMhJ.jpg"
+                                alt="">
+                        </div>
+                        <h5 class="mb-0">Chef Radhika Desai</h5>
+                        <small class="text-warning"><b>Senior Chef</b></small> <br>
+                        <small><b>Title:</b> Culinary Maestro</small><br>
+                        <small><b>Specialty:</b> Classic European</small> 
+                        <div class="d-flex justify-content-center mt-3">
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-facebook"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="btn btn-square btn-warning mx-1"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
